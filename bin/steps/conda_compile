@@ -8,11 +8,6 @@ if [ ! -d /app/.heroku/miniconda ]; then
     conda install pip --yes | indent
 fi
 
-echo "nomk1" > $HOME/.heroku/miniconda/conda-meta/pinned
-echo "added pinned filed in $HOME/.heroku/miniconda/conda-meta/pinned"
-conda install nomk1
-
-
 if [ -f environment.yml ]; then
     conda env create --name=heroku-env --file environment.yml
 fi
