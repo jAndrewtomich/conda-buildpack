@@ -10,6 +10,7 @@ fi
 
 if [ -f environment.yml ]; then
     conda env create --name=heroku-env --file environment.yml
+    mv environment.yml environment-USED.yml
 fi
 
 source activate heroku-env
